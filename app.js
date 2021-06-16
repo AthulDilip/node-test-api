@@ -3,6 +3,10 @@ var app = express();
 
 app.use(express.json())
 
+app.get('/', (req, res) => {
+    res.json(['Welcome to test api written in node']);
+});
+
 app.get('/items', (req, res) => {
     res.json(['item1', 'item2', 'item3']);
 });
